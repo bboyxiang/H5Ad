@@ -1,0 +1,192 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>BBQ World</title>
+	<style>
+
+body,div{
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+body{
+	background: #000;
+}
+
+#lod{
+
+color:#fff;
+font-size:1.5em;
+text-align: center;
+width:100%;
+margin-top:50%;
+position: absolute;
+
+}
+
+
+	</style>
+</head>
+<body>
+<audio src="R/BigUP.mp3" id="bgm"></audio>
+
+</body>
+	<script src="miao.js"></script>
+
+	<!-- <script src="weixinshare.js"></script> -->
+
+<div id='lod'></div>
+<script>
+
+/*wx.ready(function(){
+
+
+    wx.onMenuShareTimeline({
+        title: '烤天下重金招聘：只要你敢来，我们就敢要！', // 分享标题
+        link:  window.location.href, // 分享链接
+        imgUrl: 'https://demo.3dk.com/BBQ/R/feixiang.jpg'
+    });
+
+    wx.onMenuShareAppMessage({
+        title: '烤天下重金招聘!', // 分享标题
+        desc: '只要你敢来，我们就敢要！', // 分享描述
+        link: window.location.href, // 分享链接
+        imgUrl: 'https://demo.3dk.com/BBQ/R/feixiang.jpg', // 分享图标
+        type: '', // 分享类型,music、video或link，不填默认为link
+        dataUrl: ''
+    });
+
+});*/
+
+Q('app',{
+	name:'BBQ World',
+	R:{
+		image:[
+		// v1
+				{name:'bg01',src:'01/bg01.jpg'},
+				{name:'text0101',src:'01/text0101.png'},
+				{name:'text0201',src:'01/text0201.png'},
+				{name:'text0301',src:'01/text0301.png'},
+				{name:'text0401',src:'01/text0401.png'},
+
+				// v2
+				{name:'bg0202',src:'02/2/bg0202.jpg'},
+				{name:'con0202',src:'02/2/con0202.png'},
+				{name:'conTest0202',src:'02/2/conText0202.png'},
+
+				// v3
+				{name:'bg0201',src:'02/1/bg0201.jpg'},
+				{name:'con0201',src:'02/1/con0201.png'},
+				{name:'conTest0201',src:'02/1/conText0201.png'},
+
+				// v4
+				{name:'bg0203',src:'02/3/bg0203.jpg'},
+				{name:'con0203',src:'02/3/con0203.png'},
+				{name:'conTest0203',src:'02/3/conText0203.png'},
+
+				// v5
+				{name:'bg03',src:'03/bg03.jpg'},
+				{name:'con03Middle',src:'03/con03Middle.png'},
+				{name:'conBot03',src:'03/conBot03.png'},
+				{name:'conBotTest03',src:'03/conBotTest03.png'},
+				{name:'conMiddleTest03',src:'03/conMiddleTest03.png'},
+				{name:'conTopTest03',src:'03/conTopTest03.png'},
+
+				// v6
+				{name:'bg0401',src:'04/1/bg0401.jpg'},
+				{name:'conBotLeft0401',src:'04/1/conBotLeft0401.png'},
+				{name:'conBotRight0401',src:'04/1/conBotRight0401.png'},
+				{name:'conMiddleRight0401',src:'04/1/conMiddleright0401.png'},
+				{name:'conMiddleCenter0401',src:'04/1/conMiddlecenter0401.png'},
+				{name:'conMiddleLeft0401',src:'04/1/conMiddleleft0401.png'},
+				{name:'conTop0401',src:'04/1/conTop0401.png'},
+				{name:'conTopTest0401',src:'04/1/conTopTest0401.png'},
+				{name:'conBotTest0401',src:'04/1/conBotTest0401.png'},
+
+				// v7
+				{name:'conMiddle1_0402',src:'04/2/conMiddle1_0402.png'},
+				{name:'conMiddle2_0402',src:'04/2/conMiddle2_0402.png'},
+				{name:'conMiddle3_0402',src:'04/2/conMiddle3_0402.png'},
+				{name:'conMiddle4_0402',src:'04/2/conMiddle4_0402.png'},
+				{name:'conMiddle5_0402',src:'04/2/conMiddle5_0402.png'},
+				{name:'top0402',src:'04/2/top0402.png'},
+				{name:'topText0402',src:'04/2/topText0402.png'},
+				{name:'conText0402',src:'04/2/conText0402.png'},
+
+				// v8
+				{name:'con1_0403',src:'04/3/con1_0403.png'},
+				{name:'con2_0403',src:'04/3/con2_0403.png'},
+				{name:'con3_0403',src:'04/3/con3_0403.png'},
+				{name:'con4_0403',src:'04/3/con4_0403.png'},
+				{name:'conText0403',src:'04/3/conText0403.png'},
+				{name:'conTop0403',src:'04/3/conTop0403.png'},
+
+				// v9
+				{name:'con1_0404',src:'04/4/con1_0404.png'},
+				{name:'con2_0404',src:'04/4/con2_0404.png'},
+				{name:'con3_0404',src:'04/4/con3_0404.png'},
+				{name:'conText0404',src:'04/4/conText0404.png'},
+				{name:'conTopText0404',src:'04/4/conTopText0404.png'},
+
+				// v10
+				{name:'conBot05',src:'05/1/conBot05.png'},
+				{name:'conBotText05',src:'05/1/conBotText05.png'},
+				{name:'conBotTextBg05',src:'05/1/conBotTextBg05.png'},
+				{name:'conMiddle05',src:'05/1/conMiddle05.png'},
+				{name:'conMiddleText05',src:'05/1/conMiddleText05.png'},
+
+				// v11
+				{name:'bg0501',src:'05/2/bg0501.jpg'},
+				{name:'cona0501',src:'05/2/cona0501.png'},
+				{name:'conb0501',src:'05/2/conb0501.png'},
+				{name:'conc0501',src:'05/2/conc0501.png'},
+				{name:'cond0501',src:'05/2/cond0501.png'},
+
+				// v12
+				{name:'conTopBut0503',src:'05/3/conTopBut0503.png'},
+				{name:'address0503',src:'05/3/address0503.png'},
+				{name:'context0503',src:'05/3/context0503.png'},
+				{name:'map',src:'05/3/map.jpg'},
+
+			],
+		views:[
+			'v1',
+			'v2',
+			'v3',
+			'v4',
+			'v5',
+			'v6',
+			'v7',
+			'v8',
+			'v9',
+			'v10',
+			'v11',
+			'v12',
+		],
+		plug:[
+			'trn'
+		]
+	},
+	listener:{
+		init:function(){
+			Q.mp3=document.getElementById('bgm');
+			Q.mp3.loop=true;
+			Q.mp3.play();
+			lod.style.display = 'none';
+
+			Q.go('v1');
+
+		},
+		loading:function(a,b){
+
+
+			lod.innerHTML = '正在加载...'+(a.idx/a.length *100 |0) +'%';
+
+		}
+	}
+})
+
+
+</script>
+</html>
